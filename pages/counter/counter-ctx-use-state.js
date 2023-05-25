@@ -31,13 +31,24 @@ const Counter = () => {
   return <div>Counter: {counter}</div>;
 };
 
-export default function CounterUseState() {
+function CounterUseState() {
   return (
     <div>
       <CounterContextProvider>
         <Container />
         <Counter />
       </CounterContextProvider>
+    </div>
+  );
+}
+
+export default function CounterUseStatePage() {
+  return (
+    <div>
+      <CounterUseState />
+      <CounterUseState />
+      <CounterUseState />
+      <CounterUseState />
     </div>
   );
 }
